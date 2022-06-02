@@ -89,7 +89,7 @@ autodoc_default_options = {
 autosummary_generate = True
 
 # Set the master doc
-master_doc = 'source/Home'
+master_doc = 'source/index'
 
 # -- Options for HTML output -------------------------------------------------
 
