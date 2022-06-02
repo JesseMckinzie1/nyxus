@@ -17,6 +17,6 @@ operate at any scale, its highly validated algorithms, and its modular nature th
    :maxdepth: 3
    :caption: Contents:
 
-   devguide
-   examples
-   featurelist
+   source/devguide
+   source/examples
+   source/featurelist
