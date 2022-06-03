@@ -1,0 +1,2 @@
+.. automodule:: nyxus.interface 
+    :autosummary:
