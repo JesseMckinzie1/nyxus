@@ -89,10 +89,9 @@ Feature methods are run by Nyxus feature manager. The order of their running is 
 Step 5 - plan feature's internal and exposed data; implement saving results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code-block:: bash
 
-
-### Step 6 - implement feature method's online behavior (for oversized ROIs only)
+Step 6 - implement feature method's online behavior (for oversized ROIs only)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 In order to perform some action on the level of individual pixel while scanning a trivial ROI e.g. calculate some statistics using Welford principle, override abstract method
 
 .. code-block:: c++
@@ -101,7 +100,8 @@ In order to perform some action on the level of individual pixel while scanning 
 
 or give it empty body.
 
-### Step 7 - implement feature calculation of regular sized ROIs
+Step 7 - implement feature calculation of regular sized ROIs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ROIs are classified to regular ("trivial") or oversized automatically based on their area in pixels. It's developer's responsibility to handle both cases by implementing pure virtual methods of abstract class FeatureMethod, parent of your particular feature method. To implement regular-sized feature calculation, override method
 
 .. code-block:: c++
@@ -131,7 +131,8 @@ For example
    }
 
 
-### Step 8 - implement feature calculation of oversized ROIs
+Step 8 - implement feature calculation of oversized ROIs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 An oversized ROI's cached data cannot fit in computer meory so in the oversized ROI scenarios we cannot rely on its pixel cloud or image matrix. Instead, all the calculations should be performed "in place" - using the image browser class ImageLoader (header image_loader.h) similarly to class ImageMatrix (image_matrix.h) and creating out of memory cache using classes OutOfRamPixelCloud, OOR_ReadMatrix, ReadImageMatrix_nontriv, and WriteImageMatrix_nontriv (header image_matrix.nontriv). You are guaranteed to have initialized object LR::osized_pixel_cloud prior to the call of method osized_calculate(). For example:
 
 .. code-block:: c++
@@ -157,7 +158,8 @@ An oversized ROI's cached data cannot fit in computer meory so in the oversized 
    }
 
 
-### Step 9 - implementing the output of composite features
+Step 9 - implementing the output of composite features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If your feature method class provides multiple features, like ShamrockFeature calculating intensity statistics in 3 segmental bins in the above example, the output of corresponding values can be managed for the CSV-file and Python bindings in functions
 
 .. code-block:: c++
@@ -171,7 +173,8 @@ If your feature method class provides multiple features, like ShamrockFeature ca
 
 accordingly.
 
-## The ROI cache - structure LR
+The ROI cache - structure LR
+-----------------------------
 
 A mask-intensity image pair is being prescanned and examined before the feature manager runs feature calculation of each feature method. As a result of that examination ROIs are being determined themselves and structure LR (defined in file roi_cache.h) is initialized for each ROI. Some fields are essential to developer's feature calculation in overridable methods of base class FeatureMethod:
 
@@ -192,7 +195,8 @@ A mask-intensity image pair is being prescanned and examined before the feature 
    | std::unordered_set <unsigned int> host_tiles | indices of TIFF tiles hosting the ROI (generally a ROI can span multiple TIFF tiles)  |
 
 
-## Adding a feature group
+Adding a feature group
+-----------------------
 Often multiple features need to be calculated together and the user faces the need to specify a long comma separated list of features. As a result the command line may become cumbersome. For example, calculating some popular morphologic features may involve the following command line
 
 .. code-block:: bash
@@ -204,14 +208,16 @@ Features can be grouped toegther and gived convenient aliases, for example the a
 .. code-block:: bash
    nyxus --features=\ *BASIC_MORPHOLOGY* AREA_PIXELS_COUNT,AREA_UM2,CENTROID_X,CENTROID_Y,BBOX_YMIN,BBOX_XMIN,BBOX_HEIGHT,BBOX_WIDTH*\ * --intDir=/home/ec2-user/work/datasetXYZ/int --segDir=/home/ec2-user/work/dataXYZ/seg --outDir=/home/ec2-user/work/datasetXYZ --filePattern=.* --csvFile=separatecsv
 
-### Step 1 - giving an alias to a multiple features 
+Step 1 - giving an alias to a multiple features 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Given the features that you need to group together are already implemented, to create a feature group define its user-facing identifier in file environment.h, for example create alias MY_FEATURE_GROUP for features MYF1, MYF2, and MYF3
 
 .. code-block:: c++
    define MY_FEATURE_GROUP "MYFEATURES"
 
 
-### Step 2 - reflect the new group in the command line help 
+Step 2 - reflect the new group in the command line help 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Make sure that the new feature group's alias is visible in the command line help.
 Then handle the command line input in file environment.cpp, method Environment::process_feature_list()
 
@@ -224,7 +230,8 @@ Then handle the command line input in file environment.cpp, method Environment::
    }
 
 
-### Step 3 - reflect the new group available to plugin users
+Step 3 - reflect the new group available to plugin users
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 In plugin use cases, don't forget to update the plugin manifest with the information about the new feature group! For example, in WIPP:
 
 .. code-block:: c++
@@ -235,4 +242,4 @@ In plugin use cases, don't forget to update the plugin manifest with the informa
       "enum": ["MYFEATURES"]
    },
    ...
-```
+
