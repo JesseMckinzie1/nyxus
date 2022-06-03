@@ -184,7 +184,7 @@ A mask-intensity image pair is being prescanned and examined before the feature 
    :header-rows: 1
    
    * - LR field 
-   - Description 
+    - Description 
    * - int label 
      - ROI's integer ID number 
    * - std::string segFname, intFname 
