@@ -178,37 +178,35 @@ The ROI cache - structure LR
 
 A mask-intensity image pair is being prescanned and examined before the feature manager runs feature calculation of each feature method. As a result of that examination ROIs are being determined themselves and structure LR (defined in file roi_cache.h) is initialized for each ROI. Some fields are essential to developer's feature calculation in overridable methods of base class FeatureMethod:
 
----
-
 .. list-table::
    :header-rows: 1
    
    * - LR field 
-    - Description 
+   - Description 
    * - int label 
-     - ROI's integer ID number 
+   - ROI's integer ID number 
    * - std::string segFname, intFname 
-     - ROI's host mask and intensity image names 
+   - ROI's host mask and intensity image names 
    * - std::vector <Pixel2> raw_pixels 
-     - cloud of ROI's cached pixels 
+   - cloud of ROI's cached pixels 
    * - OutOfRamPixelCloud osized_pixel_cloud 
-     - cloud of ROI's pixels cached out of memory 
+   - cloud of ROI's pixels cached out of memory 
    * - unsigned int aux_area 
-     - ROI area in pixels
+   - ROI area in pixels
    * - PixIntens aux_min, aux_max 
-     - minimum and maximum pixel intensity within the ROI mask 
+   - minimum and maximum pixel intensity within the ROI mask 
    * - AABB aabb 
-     - axis aligned bounding box giving ROI's bounding box dimensions and origin position 
+   - axis aligned bounding box giving ROI's bounding box dimensions and origin position 
    * - std::vector<Pixel2> contour 
-     - (trivial ROIs only) pixlels of ROI contour initialized by feature PERIMETER
+   - (trivial ROIs only) pixlels of ROI contour initialized by feature PERIMETER
    * - std::vector<Pixel2> convHull_CH 
-     - (trivial ROIs only) pixels of ROI's convex hull initialized as a result of calculating any of features CONVEX_HULL_AREA, SOLIDITY, and CIRCULARITY 
+   - (trivial ROIs only) pixels of ROI's convex hull initialized as a result of calculating any of features CONVEX_HULL_AREA, SOLIDITY, and CIRCULARITY 
    * - std::vector<std::vector<StatsReal>> fvals 
-     - vector of feature value vectors of length AvailableFeatures::\_COUNT\_ (see file featureset.h) 
+   - vector of feature value vectors of length AvailableFeatures::\_COUNT\_ (see file featureset.h) 
    * - ImageMatrix aux_image_matrix 
-     - (trivial ROIs only) matrix of pixel intensities
+   - (trivial ROIs only) matrix of pixel intensities
    * - std::unordered_set <unsigned int> host_tiles 
-     - indices of TIFF tiles hosting the ROI (generally a ROI can span multiple TIFF tiles)  
+   - indices of TIFF tiles hosting the ROI (generally a ROI can span multiple TIFF tiles)  
 
 
 Adding a feature group
