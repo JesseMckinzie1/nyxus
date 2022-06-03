@@ -19,3 +19,4 @@ to operate at any scale, its highly validated algorithms, and its modular nature
    devguide
    examples
    featurelist
+   References
