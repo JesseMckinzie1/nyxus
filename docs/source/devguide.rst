@@ -178,6 +178,11 @@ The ROI cache - structure LR
 
 A mask-intensity image pair is being prescanned and examined before the feature manager runs feature calculation of each feature method. As a result of that examination ROIs are being determined themselves and structure LR (defined in file roi_cache.h) is initialized for each ROI. Some fields are essential to developer's feature calculation in overridable methods of base class FeatureMethod:
 
+
+**Pixel intensity features:**
+
+----
+
 .. list-table::
    :header-rows: 1
    
