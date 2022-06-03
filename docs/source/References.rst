@@ -1,6 +1,9 @@
+Classes and Functions 
+=====================
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   Reference/Classes
-   Reference/Functions
+   References/Classes
+   References/Functions
