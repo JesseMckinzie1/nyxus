@@ -7,16 +7,16 @@ Raw moments
 
 Raw (spatial) moments $m_{ij}$ of a 2-dimensional greyscale image  $I(x,y)$ are calculated as
 
-Spatial moment features are calculated as:\
-SPAT_MOMENT\ *00 $=m*\ {00}$    \
-SPAT_MOMENT\ *01 $=m*\ {01}$    \
-SPAT_MOMENT\ *02 $=m*\ {02}$    \
-SPAT_MOMENT\ *03 $=m*\ {03}$    \
-SPAT_MOMENT\ *10 $=m*\ {10}$    \
-SPAT_MOMENT\ *11 $=m*\ {11}$    \
-SPAT_MOMENT\ *12 $=m*\ {12}$    \
-SPAT_MOMENT\ *20 $=m*\ {20}$    \
-SPAT_MOMENT\ *21 $=m*\ {21}$    \
+Spatial moment features are calculated as:
+SPAT_MOMENT\ *00 $=m*\ {00}$    
+SPAT_MOMENT\ *01 $=m*\ {01}$    
+SPAT_MOMENT\ *02 $=m*\ {02}$    
+SPAT_MOMENT\ *03 $=m*\ {03}$    
+SPAT_MOMENT\ *10 $=m*\ {10}$    
+SPAT_MOMENT\ *11 $=m*\ {11}$    
+SPAT_MOMENT\ *12 $=m*\ {12}$    
+SPAT_MOMENT\ *20 $=m*\ {20}$    
+SPAT_MOMENT\ *21 $=m*\ {21}$    
 SPAT_MOMENT\ *30 $=m*\ {30}$    
 
 Central moments
