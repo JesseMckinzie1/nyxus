@@ -1,9 +1,10 @@
 Math
 ======
+Math formulas
 
 .. toctree::
    :maxdepth: 3
-   :caption: Contents:
+   :caption: Math:
 
    Math/f_2dmoments
    Math/f_erosion
