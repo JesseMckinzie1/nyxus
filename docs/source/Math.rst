@@ -5,13 +5,13 @@ Math
    :maxdepth: 3
    :caption: Contents:
 
-   f_2dmoments
-   f_erosion
-   f_glcm
-   f_gldm
-   f_glrlm
-   f_glrlm
-   f_glszm
-   f_morphology
-   f_ngtdm
-   f_pixel_intensity
+   Math/f_2dmoments
+   Math/f_erosion
+   Math/f_glcm
+   Math/f_gldm
+   Math/f_glrlm
+   Math/f_glrlm
+   Math/f_glszm
+   Math/f_morphology
+   Math/f_ngtdm
+   Math/f_pixel_intensity
