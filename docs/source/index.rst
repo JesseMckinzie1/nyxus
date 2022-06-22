@@ -13,7 +13,7 @@ more in development. Key features that make Nyxus unique among other image featu
 to operate at any scale, its highly validated algorithms, and its modular nature that makes the addition of new features straightforward.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
    :caption: Contents:
 
    devguide
