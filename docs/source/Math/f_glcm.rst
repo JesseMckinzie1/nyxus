@@ -95,17 +95,17 @@ GLCM_INVERSEDIFFERENCEMOMENT :math:`= \displaystyle\sum^{N\ *g-1}*\ {k=0}{\frac{
 Sum average
 -----------
 
-GLCM_SUMAVERAGE :math:`= \displaystyle\sum^{2N\ *g}*\ {k=2}{p_{x+y}(k)k}`
+GLCM_SUMAVERAGE :math:`= \displaystyle\sum^{2N\ *g}_{k=2} {p_{x+y}(k)k}`
 
 Sum variance
 ------------
 
-GLCM_SUMVARIANCE :math:`= \displaystyle\sum^{2N\ *g}*\ {k=2}{(k-SA)^2p_{x+y}(k)}`
+GLCM_SUMVARIANCE :math:`= \displaystyle\sum^{2N\ *g}_{k=2} {(k-SA)^2p_{x+y}(k)}`
 
 Sum entropy
 -----------
 
-GLCM_SUMENTROPY :math:`= \displaystyle\sum^{2N\ *g}*\ {k=2}{p_{x+y}(k)\log\ *2\big(p*\ {x+y}(k)+\epsilon\big)}`
+GLCM_SUMENTROPY :math:`= \displaystyle\sum^{2N\ *g}_{k=2} {p_{x+y}(k)\log\ *2\big(p*\ {x+y}(k)+\epsilon\big)}`
 
 Entropy
 -------
