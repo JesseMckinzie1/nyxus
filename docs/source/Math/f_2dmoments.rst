@@ -12,6 +12,7 @@ Raw (spatial) moments :math:`m_{ij}` of a 2-dimensional greyscale image  :math:`
    m_{{ij}}=\sum _{x}\sum _{y}x^{i}y^{j}I(x,y)
 
 Spatial moment features are calculated as:
+
 | SPAT_MOMENT_00 :math:`=m_{00}` 
 | SPAT_MOMENT_01 :math:`=m_{01}`   
 | SPAT_MOMENT_02 :math:`=m_{02}`    
@@ -33,6 +34,7 @@ A central moment :math:`\mu_{ij}` is defined as
    \mu_{{ij}}=\sum_{{x}}\sum _{{y}}(x-{\bar  {x}})^{i}(y-{\bar  {y}})^{j}I(x,y)
 
 Central moment features are calculated as: 
+
 | CENTRAL_MOMENT_02 :math:`=\mu_{02}`  
 | CENTRAL_MOMENT_03 :math:`=\mu_{03}`   
 | CENTRAL_MOMENT_11 :math:`=\mu_{11}`   
@@ -72,6 +74,7 @@ A normalized central moment :math:`\eta_{ij}` is defined as
 where :math:`\mu _{{ij}}` is central moment.
 
 Normalized central moment features are calculated as:
+
 | NORM_CENTRAL_MOMENT_02 :math:`=\eta_{{02}}`
 | NORM_CENTRAL_MOMENT_03 :math:`=\eta_{{03}}`
 | NORM_CENTRAL_MOMENT_11 :math:`=\eta_{{11}}`
@@ -83,7 +86,8 @@ Normalized central moment features are calculated as:
 Hu moments
 ----------
 
-Hu invariants HU_M1 through HU_M7 are calculated as\
+Hu invariants HU_M1 through HU_M7 are calculated as
+
 | HU_M1 :math:`=\eta_{{20}}+\eta _{{02}}`
 | HU_M2 :math:`=(\eta_{{20}}-\eta_{{02}})^{2}+4\eta_{{11}}^{2}`
 | HU_M3 :math:`=(\eta_{{30}}-3\eta_{{12}})^{2}+(3\eta_{{21}}-\eta _{{03}})^{2}`
