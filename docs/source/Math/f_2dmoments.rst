@@ -12,32 +12,35 @@ Raw (spatial) moments :math:`m_{ij}` of a 2-dimensional greyscale image  :math:`
    m_{{ij}}=\sum _{x}\sum _{y}x^{i}y^{j}I(x,y)
 
 Spatial moment features are calculated as:
-SPAT_MOMENT\ *00 $=m*\ {00}$    
-SPAT_MOMENT\ *01 $=m*\ {01}$    
-SPAT_MOMENT\ *02 $=m*\ {02}$    
-SPAT_MOMENT\ *03 $=m*\ {03}$    
-SPAT_MOMENT\ *10 $=m*\ {10}$    
-SPAT_MOMENT\ *11 $=m*\ {11}$    
-SPAT_MOMENT\ *12 $=m*\ {12}$    
-SPAT_MOMENT\ *20 $=m*\ {20}$    
-SPAT_MOMENT\ *21 $=m*\ {21}$    
-SPAT_MOMENT\ *30 $=m*\ {30}$    
+
+SPAT_MOMENT_00 :math:`=m*\ {00}` |
+SPAT_MOMENT_01 :math:`=m*\ {01}` |  
+SPAT_MOMENT_02 :math:`=m*\ {02}` |   
+SPAT_MOMENT_03 :math:`=m*\ {03}` |   
+SPAT_MOMENT_10 :math:`=m*\ {10}` |   
+SPAT_MOMENT_11 :math:`=m*\ {11}` |   
+SPAT_MOMENT_12 :math:`=m*\ {12}` |   
+SPAT_MOMENT_20 :math:`=m*\ {20}` |   
+SPAT_MOMENT_21 :math:`=m*\ {21}` |   
+SPAT_MOMENT_30 :math:`=m*\ {30}` |   
 
 Central moments
 ---------------
 
-A central moment $\mu_{ij}$ is defined as 
+A central moment :math:`\mu_{ij}` is defined as 
 
-$$\mu *{{ij}}=\sum *\ {{x}}\sum _{{y}}(x-{\bar  {x}})^{i}(y-{\bar  {y}})^{j}I(x,y)$$
+.. math::
 
-Central moment features are calculated as:\
-CENTRAL_MOMENT\ *02 $=\mu*\ {02}$   \
-CENTRAL_MOMENT\ *03 $=\mu*\ {03}$   \
-CENTRAL_MOMENT\ *11 $=\mu*\ {11}$   \
-CENTRAL_MOMENT\ *12 $=\mu*\ {12}$   \
-CENTRAL_MOMENT\ *20 $=\mu*\ {20}$   \
-CENTRAL_MOMENT\ *21 $=\mu*\ {21}$   \
-CENTRAL_MOMENT\ *30 $=\mu*\ {20}$   
+   \mu *{{ij}}=\sum *\ {{x}}\sum _{{y}}(x-{\bar  {x}})^{i}(y-{\bar  {y}})^{j}I(x,y)
+
+Central moment features are calculated as: |
+CENTRAL_MOMENT_02 :math:`=\mu*\ {02}`   |
+CENTRAL_MOMENT_03 :math:`=\mu*\ {03}`   |
+CENTRAL_MOMENT_11 :math:`=\mu*\ {11}`   |
+CENTRAL_MOMENT_12 :math:`=\mu*\ {12}`   |
+CENTRAL_MOMENT_20 :math:`=\mu*\ {20}`   |
+CENTRAL_MOMENT_21 :math:`=\mu*\ {21}`   |
+CENTRAL_MOMENT_30 :math:`=\mu*\ {20}`   
 
 Normalized raw moments
 ----------------------
