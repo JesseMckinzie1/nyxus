@@ -16,11 +16,11 @@ Texture features / GLCM
   .. math::
 
      \textbf{I} = \begin{bmatrix}
-     1 & 2 & 5 & 2 & 3\
-     3 & 2 & 1 & 3 & 1\
-     1 & 3 & 5 & 5 & 2\
-     1 & 1 & 1 & 1 & 2\
-     1 & 2 & 4 & 3 & 5 \end{bmatrix}
+     1 & 2 & 5 & 2 & 3\\
+     3 & 2 & 1 & 3 & 1\\
+     1 & 3 & 5 & 5 & 2\\
+     1 & 1 & 1 & 1 & 2\\
+     1 & 2 & 4 & 3 & 5 \\end{bmatrix}
 
 
   For distance :math:`\delta = 1` (considering pixels with a distance of 1 pixel from each other)
@@ -30,10 +30,10 @@ Texture features / GLCM
   .. math::
 
      \textbf{P} = \begin{bmatrix}
-     6 & 4 & 3 & 0 & 0\
-     4 & 0 & 2 & 1 & 3\
-     3 & 2 & 0 & 1 & 2\
-     0 & 1 & 1 & 0 & 0\
+     6 & 4 & 3 & 0 & 0\\
+     4 & 0 & 2 & 1 & 3\\
+     3 & 2 & 0 & 1 & 2\\
+     0 & 1 & 1 & 0 & 0\\
      0 & 3 & 2 & 0 & 2 \end{bmatrix}
 
 
@@ -100,7 +100,7 @@ GLCM_SUMAVERAGE :math:`= \displaystyle\sum^{2N\ *g}*\ {k=2}{p_{x+y}(k)k}`
 Sum variance
 ------------
 
-GLCM_SUMVARIANCE = :math:` \displaystyle\sum^{2N\ *g}*\ {k=2}{(k-SA)^2p_{x+y}(k)}`
+GLCM_SUMVARIANCE :math:`= \displaystyle\sum^{2N\ *g}*\ {k=2}{(k-SA)^2p_{x+y}(k)}`
 
 Sum entropy
 -----------
