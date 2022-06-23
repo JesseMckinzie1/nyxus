@@ -5,7 +5,11 @@
 Raw moments
 -----------
 
-Raw (spatial) moments $m_{ij}$ of a 2-dimensional greyscale image  $I(x,y)$ are calculated as
+Raw (spatial) moments :math:`m_{ij}` of a 2-dimensional greyscale image  :math:`I(x,y)`` are calculated as
+
+.. math::
+   
+   m_{{ij}}=\sum _{x}\sum _{y}x^{i}y^{j}I(x,y)
 
 Spatial moment features are calculated as:
 SPAT_MOMENT\ *00 $=m*\ {00}$    
