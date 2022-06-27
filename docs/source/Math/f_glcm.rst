@@ -15,12 +15,12 @@ Texture features / GLCM
 
   .. math::
 
-     \textbf{I} = \begin{bmatrix}
-     1 & 2 & 5 & 2 & 3\\
-     3 & 2 & 1 & 3 & 1\\
-     1 & 3 & 5 & 5 & 2\\
-     1 & 1 & 1 & 1 & 2\\
-     1 & 2 & 4 & 3 & 5 \\end{bmatrix}
+    \textbf{I} = \begin{bmatrix}
+    1 & 2 & 5 & 2 & 3\\
+    3 & 2 & 1 & 3 & 1\\
+    1 & 3 & 5 & 5 & 2\\
+    1 & 1 & 1 & 1 & 2\\
+    1 & 2 & 4 & 3 & 5 \end{bmatrix}
 
 
   For distance :math:`\delta = 1` (considering pixels with a distance of 1 pixel from each other)
