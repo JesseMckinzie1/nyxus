@@ -39,7 +39,7 @@ ASPECT_RATIO :math:`\displaystyle =
 \end{array}\right.
 ` 
 
-EXTENT :math:`= \frac {S}{S_{BB}}$ where $S_BB=\epsilon_H\epsilon_V`
+EXTENT :math:`= \frac {S}{S_{BB}}` where :math:`S_BB=\epsilon_H\epsilon_V`
 
 Features related to ROI's contour
 ---------------------------------
