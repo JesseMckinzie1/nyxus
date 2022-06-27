@@ -14,20 +14,20 @@ As an example, consider the following 5x5 image, with 5 discrete gray levels:
 .. math::
 
     \textbf{I} = \begin{bmatrix}
-    5 & 2 & 5 & 4 & 4\
-    3 & 3 & 3 & 1 & 3\
-    2 & 1 & 1 & 1 & 3\
-    4 & 2 & 2 & 2 & 3\
+    5 & 2 & 5 & 4 & 4\\
+    3 & 3 & 3 & 1 & 3\\
+    2 & 1 & 1 & 1 & 3\\
+    4 & 2 & 2 & 2 & 3\\
     3 & 5 & 3 & 3 & 2 \end{bmatrix}
 
 The GLSZM then becomes:
 
 .. math ::
     \textbf{P} = \begin{bmatrix}
-    0 & 0 & 0 & 1 & 0\
-    1 & 0 & 0 & 0 & 1\
-    1 & 0 & 1 & 0 & 1\
-    1 & 1 & 0 & 0 & 0\
+    0 & 0 & 0 & 1 & 0\\
+    1 & 0 & 0 & 0 & 1\\
+    1 & 0 & 1 & 0 & 1\\
+    1 & 1 & 0 & 0 & 0\\
     3 & 0 & 0 & 0 & 0 \end{bmatrix}
 
 
