@@ -16,9 +16,9 @@ CENTROID_X :math:`\gets c_X = \frac{1}{n} \sum *i ^n  A*\ {Xi}`
 
 CENTROID_Y :math:`\gets c_Y =  \frac{1}{n} \sum *i ^n  A*\ {Yi}`
 
-WEIGHTED_CENTROID_X :math:`\gets w_X = \frac{1}{n} \sum _i ^n  A\ *i (A*\ {Xi}-c_X)`
+WEIGHTED_CENTROID_X :math:`\gets w_X = \frac{1}{n} \sum _i ^n  A_i (A*\ {Xi}-c_X)`
 
-WEIGHTED_CENTROID_Y :math:`= \frac{1}{n} \sum _i ^n  A\ *i (A*\ {Yi}-c_Y) \to w_Y`
+WEIGHTED_CENTROID_Y :math:`= \frac{1}{n} \sum _i ^n  A_i (A*\ {Yi}-c_Y) \to w_Y`
 
 MASS_DISPLACEMENT :math:`= \sqrt {( w_X - c_X)^2 + ( w_Y - c_Y)^2}`
 
@@ -65,7 +65,7 @@ EDGE_INTEGRATEDINTENSITY :math:`\displaystyle = \sum _i {C_i}`
 Features related to ROI's convex hull
 -------------------------------------
 
-CONVEX_HULL_AREA :math:`=S\ *H=\displaystyle {\frac {1}{2}}{\Biggl \vert }\sum *\ {i=0}^{n\ *H-1}(x*\ {i}y\ *{i+1}-x*\ {i+1}y_{i}){\Biggr \vert }` where :math:`n_H` is the number of convex hull vertices, :math:`\displaystyle {(x_i,y_i)}, i=0, 1, ..., n_H-1` are Cartesian coordinates of the vertives.
+CONVEX_HULL_AREA :math:`=S_H=\displaystyle {\frac {1}{2}}{\Biggl \vert }\sum *\ {i=0}^{n_H-1}(x*\ {i}y_{i+1}-x*\ {i+1}y_{i}){\Biggr \vert }` where :math:`n_H` is the number of convex hull vertices, :math:`\displaystyle {(x_i,y_i)}, i=0, 1, ..., n_H-1` are Cartesian coordinates of the vertives.
 
 SOLIDITY :math:`\displaystyle = \frac {S}{S_H}` where :math:`S` is ROI area (feature AREA_PIXELS_COUNT)
 
@@ -130,9 +130,9 @@ Polygonal representation features
 
 POLYGONALITY_AVE :math:`\displaystyle = 5 (r_S + r_A)` where :math:`\displaystyle r_S = 1 - \left|1-\frac{\frac{P}{n_N}}{\sqrt{\frac{4S\tg \frac{\pi}{n_N}}{n_N}}} \right|` - polygonal size ratio, :math:`\displaystyle r_A = 1 - \left| 1 - \frac{S\tg \frac{\pi}{n_N}}{\frac{1}{4} \: n_N \: P^2}\right|` - polygonal area ratio, :math:`n_N` - number of ROI's neighbors, :math:`P` and :math:`S` - ROI's perimeter and area.
 
-HEXAGONALITY\ *AVE :math:`\displaystyle = \sqrt {\frac {r*\ {\sigma A}^2 + r_{\sigma P}^2}{2} }`
+HEXAGONALITY_AVE :math:`\displaystyle = \sqrt {\frac {r*\ {\sigma A}^2 + r_{\sigma P}^2}{2} }`
 
-HEXAGONALITY\ *STDDEV :math:`\displaystyle = 5 (r*\ {HS} + r_{HP})`
+HEXAGONALITY_STDDEV :math:`\displaystyle = 5 (r*\ {HS} + r_{HP})`
 
 Other features
 --------------
@@ -174,15 +174,15 @@ Feret diameter
 
 :raw-html-m2r:`<img src="./feret3.jpg" height=200>`
 
-MIN_FERET\ *DIAMETER - minimum :math:`X*\ {Fe}` \
-MAX_FERET\ *DIAMETER - maximum :math:`X*\ {Fe}` \
-MIN_FERET\ *ANGLE - rotation angle delivering :math:`\min X*\ {Fe}` \
-MAX_FERET\ *ANGLE - rotation angle delivering :math:`\max X*\ {Fe}`
+MIN_FERET_DIAMETER - minimum :math:`X*\ {Fe}` \
+MAX_FERET_DIAMETER - maximum :math:`X*\ {Fe}` \
+MIN_FERET_ANGLE - rotation angle delivering :math:`\min X*\ {Fe}` \
+MAX_FERET_ANGLE - rotation angle delivering :math:`\max X*\ {Fe}`
 
 Statistics of Feret diameter at 0-90 degree rotation angles:
-STAT_FERET_DIAM\ *MIN :math:`=\min X*\ {Fe}`\
-STAT_FERET_DIAM\ *MAX :math:`=\max X*\ {Fe}`\
-STAT_FERET_DIAM\ *MEAN :math:`=\operatorname {E} ( X*\ {Fe} )`\
+STAT_FERET_DIAM_MIN :math:`=\min X*\ {Fe}`\
+STAT_FERET_DIAM_MAX :math:`=\max X*\ {Fe}`\
+STAT_FERET_DIAM_MEAN :math:`=\operatorname {E} ( X*\ {Fe} )`\
 STAT_FERET_DIAM_MEDIAN\
 STAT_FERET_DIAM_STDDEV\
 STAT_FERET_DIAM_MODE
